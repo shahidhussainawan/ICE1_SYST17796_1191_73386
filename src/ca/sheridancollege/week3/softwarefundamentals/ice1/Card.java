@@ -15,7 +15,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * @author dancye
  */
 public class Card {
-
+private String name;
    private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
 
