@@ -22,7 +22,7 @@ public class CardTrick {
         Card luckyCard=new Card();
         luckyCard.setSuit("Spades");
         luckyCard.setValue(12);
-        Scanner data = new Scanner(System.in);
+        int count=0;
         for (int i = 0; i < magicHand.length; i++) {
             magicHand[i] = new Card();
             magicHand[i].setValue((int) (Math.random() * 13) + 1);
@@ -33,12 +33,14 @@ public class CardTrick {
            if(luckyCard.getValue()==magicHand[i].getValue()&&luckyCard.getSuit().equals(magicHand[i].getSuit()))
            {
                System.out.println("You Got the lucky Card");
-           }
-           else{
-               System.out.println("you did not get the lucky card");
+               count++;
            }
         }
+        if(count==0){
+         System.out.println("Sorry no Lucky Card");   
+        }
         //Then report the result here
+        
     }
 
 }
