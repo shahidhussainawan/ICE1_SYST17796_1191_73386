@@ -19,25 +19,23 @@ public class CardTrick {
 
     public static void main(String[] args) {
         Card[] magicHand = new Card[7];
+        Card luckyCard=new Card();
+        luckyCard.setSuit("Spades");
+        luckyCard.setValue(12);
         Scanner data = new Scanner(System.in);
         for (int i = 0; i < magicHand.length; i++) {
             magicHand[i] = new Card();
             magicHand[i].setValue((int) (Math.random() * 13) + 1);
             magicHand[i].setSuit(Card.SUITS[(int) (Math.random() * 4)]);
         }
-        System.out.println("Enter a card value from 1-13 (Ace being 1 and King 13");
-        int value = data.nextInt();
-        data.nextLine();
-        System.out.println("Enter a card suit (Hearts, Spades, Clubs or Diamonds)");//insert code to ask the user for Card value and suit, create their card
-        String suit= data.nextLine();
         for(int i=0; i<magicHand.length; i++)// and search magicHand here
         {
-           if(value==magicHand[i].getValue()&&suit.equals(magicHand[i].getSuit()))
+           if(luckyCard.getValue()==magicHand[i].getValue()&&luckyCard.getSuit().equals(magicHand[i].getSuit()))
            {
-               System.out.println("You Guessed a Card!!!");
+               System.out.println("You Got the lucky Card");
            }
            else{
-               System.out.println("Better Luck Next Time");
+               System.out.println("you did not get the lucky card");
            }
         }
         //Then report the result here
