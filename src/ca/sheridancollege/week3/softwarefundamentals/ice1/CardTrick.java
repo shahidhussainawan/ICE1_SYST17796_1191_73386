@@ -13,7 +13,7 @@ import java.util.Scanner;
  * the user's card. To be used as starting code in ICE 1
  *
  * @author dancye
- * @modifer Riley Gray 2019-02-01
+ * @modifer Riley Gray 991471547
  */
 public class CardTrick {
 
@@ -25,12 +25,7 @@ public class CardTrick {
             magicHand[i].setValue((int) (Math.random() * 13) + 1);
             magicHand[i].setSuit(Card.SUITS[(int) (Math.random() * 4)]);
         }
-         for(int i=0; i<magicHand.length; i++)// and search magicHand here
-        {
-                    System.out.println(magicHand[i].getValue()+" of " + magicHand[i].getSuit());
-
-        }
-        System.out.println("Enter a card value from 1-13");
+        System.out.println("Enter a card value from 1-13 (Ace being 1 and King 13");
         int value = data.nextInt();
         data.nextLine();
         System.out.println("Enter a card suit (Hearts, Spades, Clubs or Diamonds)");//insert code to ask the user for Card value and suit, create their card
@@ -39,9 +34,11 @@ public class CardTrick {
         {
            if(value==magicHand[i].getValue()&&suit.equals(magicHand[i].getSuit()))
            {
-               System.out.println("match");
+               System.out.println("You Guessed a Card!!!");
            }
-            
+           else{
+               System.out.println("Better Luck Next Time");
+           }
         }
         //Then report the result here
     }
