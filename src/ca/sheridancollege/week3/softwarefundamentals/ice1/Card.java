@@ -20,7 +20,15 @@ public class Card {
     
    private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
-
+   
+   public Card(String inputString, int inputInt){
+       this.suit = inputString;
+       this.value = inputInt;
+   }
+   public Card(){
+       
+   }
+   
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
     
    //returns the Card's Suit

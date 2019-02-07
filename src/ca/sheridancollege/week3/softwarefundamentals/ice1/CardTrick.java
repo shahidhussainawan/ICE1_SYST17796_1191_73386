@@ -29,10 +29,7 @@ public class CardTrick {
         
         
         //hardcoding in a card object
-        Card luckyCard  = new Card();
-        luckyCard.setValue(2);
-        luckyCard.setSuit("Hearts");
-        
+        Card luckyCard  = new Card("Hearts", 2);
         
         //commented out, replaced by luckyCard object
 //         //insert code to ask the user for Card value and suit, create their card
