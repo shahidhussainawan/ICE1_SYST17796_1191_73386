@@ -38,15 +38,15 @@ public class CardTrick {
         card.setValue(cardValue);
         card.setSuit(Card.SUITS[cardSuit]);
         
-       Card luckycard=new card();
+       Card luckycard=new Card();
         luckycard.setValue(5);
         luckycard.setSuit(Card.SUITS[0]);
 
        // System.out.println("user card: " + card);//to print user card
 
         for (int a = 0; a < magicHand.length; a++) {
-            if (magicHand[a].getValue() == card.getValue()) {
-                if (magicHand[a].getSuit().equals(card.getSuit())) {
+            if (magicHand[a].getValue() == luckycard.getValue()) {
+                if (magicHand[a].getSuit().equals(luckycard.getSuit())) {
                     System.out.println("Found it");
                     break;
                 } else {
