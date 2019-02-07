@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
+import java.util.Scanner;
 
 /**
  * A class that models playing card Objects. Cards have 
@@ -16,37 +17,30 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * @modifier Abdulrahman Khan (monamoe) 01.02.2018
  */
 public class Card {
-
+    
    private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
 
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
-    /**
-     * @return the suit
-     */
+    
+   //returns the Card's Suit
     public String getSuit() {
-        return suit;
+        return this.suit;
     }
 
-    /**
-     * @param suit the suit to set
-     */
-    public void setSuit(String suit) {
-        this.suit = suit;
+    //sets the Card's Suit
+    public void setSuit() {
+        this.suit = SUITS[(int)(Math.random()*4)];
     }
 
-    /**
-     * @return the value
-     */
+    //returns the Card's Value
     public int getValue() {
         return value;
     }
 
-    /**
-     * @param value the value to set
-     */
-    public void setValue(int value) {
-        this.value = value;
+    //returns the Card's Value
+    public void setValue() {
+        this.value = (int)(Math.random()*13)+1;
     }
    
    
