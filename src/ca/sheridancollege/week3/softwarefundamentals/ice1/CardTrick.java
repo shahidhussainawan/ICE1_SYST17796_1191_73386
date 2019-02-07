@@ -13,7 +13,7 @@ import java.util.Scanner;
  * the user's card. To be used as starting code in ICE 1
  *
  * @author dancye
- * @modifier 
+ * @modifier Ayodeji date: 2/7/2019 
  */
 public class CardTrick {
 
@@ -37,6 +37,10 @@ public class CardTrick {
         Card card = new Card();
         card.setValue(cardValue);
         card.setSuit(Card.SUITS[cardSuit]);
+        
+       Card luckycard=new card();
+        luckycard.setValue(5);
+        luckycard.setSuit(Card.SUITS[0]);
 
        // System.out.println("user card: " + card);//to print user card
 
