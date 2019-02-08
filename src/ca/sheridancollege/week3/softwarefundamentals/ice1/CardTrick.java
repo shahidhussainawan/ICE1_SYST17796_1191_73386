@@ -72,8 +72,14 @@ public class CardTrick {
           System.out.println("You lost");
                 break;
             }
+    }
+         Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit("Diamonds");
+        System.out.println("Lucky Card "+luckyCard.getValue());
+        System.out.println("Lucky Suite "+luckyCard.getSuit());
        
-        }
+        
         
     }
     
