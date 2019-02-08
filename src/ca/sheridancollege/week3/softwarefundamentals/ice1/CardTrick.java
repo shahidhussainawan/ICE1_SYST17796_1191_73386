@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
+import java.util.Scanner;
+import java.util.Random;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
@@ -13,20 +15,44 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  */
 public class CardTrick {
     
+    
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
+        Random r = new Random();
         
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            c.setValue(r.nextInt (13) + 1);
+            c.setSuit(Card.SUITS[r.nextInt(3)]);
+           magicHand[i]=c;
+            
         }
+        Scanner k = new Scanner(System.in);
+        System.out.println("Enter Card Value: ");
+        int cardValue = k.nextInt();
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+        System.out.println("Enter card suit: ");
+        int cardSuit = k.nextInt();
+        
+       Card luckyCard = new Card();
+       luckyCard.setValue(10);
+       luckyCard.setSuit("HEART");
+       
+       for(int i=0; i<magicHand.length; i++){
+           if (magicHand[i].getSuit().equals(luckyCard.getSuit()) &&
+                    magicHand[i].getValue() == luckyCard.getValue()){
+               System.out.println("Card not found");
+           }else{
+               System.out.println("Card not found");
+           }
+           
+          //  if (magicHand[i].getSuit() == luckyCard.getSuit())){
+           
+       }
+          
+       }
     }
     
-}
+
